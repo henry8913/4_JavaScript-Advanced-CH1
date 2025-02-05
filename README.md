@@ -8,3 +8,8 @@
 - **ES6 e successivi**: Nuove funzionalità del linguaggio, tra cui let/const, arrow functions, template literals e moduli.
 - **Programmazione Asincrona**: Tecniche per la gestione dell’esecuzione parallela e asincrona del codice.
 - **AJAX e Promises**: Interazione con API esterne per la creazione di applicazioni dinamiche e reattive.
+
+  <p align="center">
+    <img src="https://github.com/henry8913/4_JavaScript-Advanced-CH1/blob/main/img/efe020c3-cfc2-41f9-be41-ad581ffc9969.jpeg" alt="Cover" width="100%" />
+</p>
+
