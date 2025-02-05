@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizi Extra</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.webp">
+    <!-- Bulma CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar is-light">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img src="img/logo.png" alt="Logo" style="max-height: 50px;">
+                </a>
+                <span class="navbar-burger" data-target="navMenu">
+                    <span></span> <span></span> <span></span>
+                </span>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">JavaScript Advanced</a>
+                    <a class="navbar-item" href="extra.html">Esercizi Extra</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Esercizi Extra</h1>
+
+            <div class="box">
+                <h2 class="subtitle">1️⃣ Rimuovi carattere dalla stringa</h2>
+                <p>Inserisci una stringa e un carattere per rimuovere tutte le sue occorrenze.</p>
+                <input class="input" type="text" id="stringInput" placeholder="Es. 'banana'">
+                <input class="input mt-2" type="text" id="charToRemove" placeholder="Es. 'a'">
+                <button class="button is-primary mt-3" onclick="testRemoveCharacter()">Test</button>
+                <p id="result1" class="has-text-weight-bold mt-2"></p>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">2️⃣ Controllo anagrammi</h2>
+                <p>Inserisci due parole per verificare se sono anagrammi.</p>
+                <input class="input" type="text" id="anagram1" placeholder="Es. 'listen'">
+                <input class="input mt-2" type="text" id="anagram2" placeholder="Es. 'silent'">
+                <button class="button is-primary mt-3" onclick="testAnagram()">Test</button>
+                <p id="result2" class="has-text-weight-bold mt-2"></p>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">3️⃣ Trova anagrammi</h2>
+                <p>Inserisci una parola per trovare i suoi anagrammi tra ['carenti', 'incerta', 'espatrio'].</p>
+                <input class="input" type="text" id="wordInput" placeholder="Es. 'cartine'">
+                <button class="button is-primary mt-3" onclick="testFindAnagrams()">Test</button>
+                <p id="result3" class="has-text-weight-bold mt-2"></p>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">4️⃣ Controllo palindromo</h2>
+                <p>Inserisci una parola per verificare se è un palindromo (uguale letta al contrario).</p>
+                <input class="input" type="text" id="palindromeInput" placeholder="Es. 'anna'">
+                <button class="button is-primary mt-3" onclick="testPalindrome()">Test</button>
+                <p id="result4" class="has-text-weight-bold mt-2"></p>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">5️⃣ Riordina cifre in ordine crescente</h2>
+                <p>Inserisci un numero e restituiscilo con le cifre ordinate in modo crescente.</p>
+                <input class="input" type="number" id="numberInput" placeholder="Es. 289">
+                <button class="button is-primary mt-3" onclick="testReorderNumber()">Test</button>
+                <p id="result5" class="has-text-weight-bold mt-2"></p>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">6️⃣ Scala di caratteri</h2>
+                <p>Inserisci un numero per creare una scala con il carattere `#` di quella altezza.</p>
+                <input class="input" type="number" id="stepsInput" placeholder="Es. 4">
+                <button class="button is-primary mt-3" onclick="testCreateStaircase()">Test</button>
+                <pre id="result6" class="has-text-weight-bold mt-2"></pre>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">7️⃣ Inverti stringa</h2>
+                <p>Inserisci una stringa per ottenerne la versione invertita.</p>
+                <input class="input" type="text" id="reverseInput" placeholder="Es. 'ciao'">
+                <button class="button is-primary mt-3" onclick="testReverseString()">Test</button>
+                <p id="result7" class="has-text-weight-bold mt-2"></p>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">8️⃣ Suddividi array</h2>
+                <p>Inserisci una lista di numeri separati da virgole e scegli la dimensione dei sotto-array.</p>
+                <input class="input" type="text" id="arraySplitInput" placeholder="Es. '1,2,3,4,5,6'">
+                <input class="input mt-2" type="number" id="splitSize" placeholder="Es. 2">
+                <button class="button is-primary mt-3" onclick="testSplitArray()">Test</button>
+                <p id="result8" class="has-text-weight-bold mt-2"></p>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">9️⃣ Piramide di caratteri</h2>
+                <p>Inserisci un numero per generare una piramide con `#` di quella altezza.</p>
+                <input class="input" type="number" id="pyramidInput" placeholder="Es. 3">
+                <button class="button is-primary mt-3" onclick="testCreatePyramid()">Test</button>
+                <pre id="result9" class="has-text-weight-bold mt-2"></pre>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">🔟 Matrice a spirale</h2>
+                <p>Inserisci un numero `N` per generare una matrice `N×N` riempita a spirale.</p>
+                <input class="input" type="number" id="matrixInput" placeholder="Es. 3">
+                <button class="button is-primary mt-3" onclick="testSpiralMatrix()">Test</button>
+                <pre id="result10" class="has-text-weight-bold mt-2"></pre>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer has-background-light">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column is-6">
+                    <h3 class="title is-5">Navigazione</h3>
+                    <ul>
+                        <li><a href="index.html" class="has-text-dark">JavaScript Advanced</a></li>
+                        <li><a href="extra.html" class="has-text-dark">Esercizi Extra</a></li>
+                    </ul>
+                </div>
+                <div class="column is-6 has-text-right">
+                    <h3 class="title is-5">Codice del Progetto</h3>
+                    <a href="https://github.com/henry8913/4_JavaScript-Advanced-CH1.git" target="_blank" class="button is-dark">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>Guarda su GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <div class="has-text-centered mt-5">
+                <p>&copy; 2025 Henry G Developer. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- W1D1 - Pratica EXTRA -->
+    <script src="js/Esercizi Extra.js"></script>
+    
+    <script src="js/Menu Mobile.js"></script>
+    <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
+</body>
+</html>

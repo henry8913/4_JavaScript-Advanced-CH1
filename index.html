@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Advanced CH1</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar is-light">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img src="img/logo.png" alt="Logo" style="max-height: 50px;">
+                </a>
+                <span class="navbar-burger" data-target="navMenu">
+                    <span></span> <span></span> <span></span>
+                </span>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">JavaScript Advanced</a>
+                    <a class="navbar-item" href="extra.html">Esercizi Extra</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">JavaScript Advanced CH1</h1>
+
+            <div class="box">
+                <h2 class="subtitle">1️⃣ Controllo numeri (50 o somma 50)</h2>
+                <p>Inserisci due numeri per verificare se uno dei due è 50 o se la loro somma è 50.</p>
+                <input class="input" type="number" id="num1" placeholder="Es. 25">
+                <input class="input mt-2" type="number" id="num2" placeholder="Es. 25">
+                <button class="button is-primary mt-3" onclick="testCheckFifty()">Test</button>
+                <p id="result1" class="has-text-weight-bold mt-2"></p>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">2️⃣ Rimuovi carattere da una stringa</h2>
+                <p>Inserisci una stringa e la posizione di un carattere per rimuoverlo.</p>
+                <input class="input" type="text" id="textInput" placeholder="Es. 'banana'">
+                <input class="input mt-2" type="number" id="positionInput" placeholder="Posizione (es. 2)">
+                <button class="button is-primary mt-3" onclick="testRemoveChar()">Test</button>
+                <p id="result2" class="has-text-weight-bold mt-2"></p>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">3️⃣ Controllo numeri in range</h2>
+                <p>Inserisci due numeri per verificare se sono compresi tra 40-60 o 70-100.</p>
+                <input class="input" type="number" id="rangeNum1" placeholder="Es. 45">
+                <input class="input mt-2" type="number" id="rangeNum2" placeholder="Es. 75">
+                <button class="button is-primary mt-3" onclick="testCheckRange()">Test</button>
+                <p id="result3" class="has-text-weight-bold mt-2"></p>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">6️⃣ Controllo numeri in un array</h2>
+                <p>Inserisci numeri separati da virgole per verificare se l'array NON contiene 1 o 3.</p>
+                <input class="input" type="text" id="arrayCheckInput" placeholder="Es. '2,4,5,6'">
+                <button class="button is-primary mt-3" onclick="testCheckArray()">Test</button>
+                <p id="result6" class="has-text-weight-bold mt-2"></p>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">7️⃣ Tipo di angolo</h2>
+                <p>Inserisci un valore in gradi per determinare il tipo di angolo.</p>
+                <input class="input" type="number" id="angleInput" placeholder="Es. 90">
+                <button class="button is-primary mt-3" onclick="testAngleType()">Test</button>
+                <p id="result7" class="has-text-weight-bold mt-2"></p>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">8️⃣ Creazione acronimo</h2>
+                <p>Inserisci una frase per generare il suo acronimo. Es. "Fabbrica Italiana Automobili Torino" → "FIAT".</p>
+                <input class="input" type="text" id="phraseInput" placeholder="Es. 'National Aeronautics Space Administration'">
+                <button class="button is-primary mt-3" onclick="testAcronym()">Test</button>
+                <p id="result8" class="has-text-weight-bold mt-2"></p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer has-background-light">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column is-6">
+                    <h3 class="title is-5">Navigazione</h3>
+                    <ul>
+                        <li><a href="index.html" class="has-text-dark">JavaScript Advanced</a></li>
+                        <li><a href="extra.html" class="has-text-dark">Esercizi Extra</a></li>
+                    </ul>
+                </div>
+                <div class="column is-6 has-text-right">
+                    <h3 class="title is-5">Codice del Progetto</h3>
+                    <a href="https://github.com/henry8913/4_JavaScript-Advanced-CH1.git" target="_blank" class="button is-dark">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>Guarda su GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <div class="has-text-centered mt-5">
+                <p>&copy; 2025 Henry G Developer. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- W1D1- Pratica -->
+    <script src="js/4_JavaScript-Advanced-CH1.js"></script>
+    
+    <script src="js/Menu Mobile.js"></script>
+    <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
+</body>
+</html>
